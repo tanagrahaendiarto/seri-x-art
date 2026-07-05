@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv \"public/logo.PNG\" \"public/logo_tmp_rename.png\")",
+      "Bash(mv \"public/logo_tmp_rename.png\" \"public/logo.png\")",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(grep -i \"foremost\" node_modules/next/font/google/index.d.ts node_modules/next/font/google/index.js)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(npx eslint *)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s http://localhost:3001/opengraph-image -o .claude/scratch/og-check.png)",
+      "Bash(curl -s http://localhost:3001/icon.png -o .claude/scratch/icon-check.png)",
+      "Bash(curl -s http://localhost:3001/apple-icon.png -o .claude/scratch/apple-icon-check.png)"
+    ]
+  }
+}
