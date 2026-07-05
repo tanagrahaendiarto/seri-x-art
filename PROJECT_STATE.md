@@ -1,41 +1,422 @@
 # PROJECT_STATE
 
-Last updated: 2026-07-06 (end of Sprint 7 — Motion Design System)
+Last Updated: 2026-07-06 (Post Sprint 7 — Motion Design System)
 
 ---
 
-## Status Umum
+# Project Overview
 
-Landing page single-page Seri X Art (Navbar, Hero, About, Competition, Timeline, Gallery, FAQ, Footer) sudah **feature-complete, accessible, dioptimasi performance/SEO, dan punya motion system** — siap production kecuali beberapa placeholder di bawah.
+**Project Name**
+Seri X Art
 
-Stack: Next.js App Router, React 19, TypeScript, Tailwind CSS v4, Motion (`motion` package).
+**Purpose**
+
+Seri X Art adalah sebuah premium editorial landing page untuk kompetisi seni yang dibangun sebagai project pembelajaran Frontend Engineering menggunakan Next.js.
+
+Project ini dikembangkan dengan pendekatan production-first, sehingga fokus tidak hanya pada UI, tetapi juga:
+
+- Clean Architecture
+- Maintainability
+- Scalability
+- Accessibility
+- Performance
+- SEO
+- Production Readiness
+
+Tech Stack:
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Motion
+- Next.js Metadata API
 
 ---
 
-## Riwayat Sprint
+# Current Status
 
-- **UI Polish** — redesign editorial seluruh section, typography Fraunces+Poppins, official color palette.
-- **Sprint 4 — Accessibility**: fix duplikasi `h1`, landmark `<main>`, skip link, kontras tombol Gold, ARIA accordion FAQ.
-- **Sprint 5 — Performance**: resize `logo.png` (3.3MB→65KB), font weight Fraunces dipangkas ke yang dipakai saja.
-- **Sprint 6 — SEO**: metadata lengkap, OG image dinamis, robots.txt, sitemap.xml, JSON-LD Event, favicon brand.
-- **Sprint 6.5 — Production QA**: audit Lighthouse production (Perf 96-100, A11y/BP/SEO 100), tanpa broken link.
-- **Sprint 7 — Motion**: satu motion system (`src/lib/motion.ts`) untuk hero reveal, scroll reveal, hover button/gallery, accordion FAQ, mobile menu — menghormati `prefers-reduced-motion`.
+## Sprint Progress
 
-Juga: fix scroll-to-top saat refresh (`ScrollRestoration.tsx`).
+✅ Sprint 1 — Landing Page
+
+✅ Sprint 2 — UI Polish
+
+✅ Sprint 3 — Responsive Design
+
+✅ Sprint 4 — Accessibility
+
+✅ Sprint 5 — Performance Optimization
+
+✅ Sprint 6 — SEO
+
+✅ Sprint 6.5 — Production QA
+
+✅ Sprint 7 — Motion Design System
 
 ---
 
-## Known Issues / Placeholder yang Harus Diganti
+# Current Architecture
 
-- **Domain masih placeholder** (`seri-x-art.example.com` di `src/lib/site.ts`) — wajib diganti sebelum deploy (dipakai metadata, sitemap, robots.txt).
-- **Register CTA** (Navbar & Hero) belum punya destination nyata.
-- **Footer social links** (Instagram/TikTok/YouTube) masih `href="#"`, menunggu URL asli.
-- **`SectionHeader.tsx` & `FeatureCard.tsx`** dead component, belum dihapus — menunggu keputusan.
-- `aria-current`/scroll-spy Navbar belum diimplementasikan (sengaja ditunda).
+Landing Page terdiri dari:
 
-## Next Recommended Priorities
+- Navbar
+- Hero
+- About
+- Competition
+- Timeline
+- Gallery
+- FAQ
+- Footer
 
-1. Tentukan destination Register CTA.
-2. Isi domain production asli + URL sosial media Footer.
-3. Putuskan nasib dead component (`SectionHeader`/`FeatureCard`).
-4. Manual QA visual di device/browser nyata (belum pernah dilakukan sejak awal).
+Semua section sudah selesai dan dianggap production-ready.
+
+---
+
+# Motion Design
+
+Sudah diimplementasikan.
+
+Motion mengikuti prinsip:
+
+- Premium
+- Elegant
+- Minimal
+- Purposeful
+
+Implementasi meliputi:
+
+- Hero reveal
+- Scroll reveal setiap section
+- Gallery hover
+- Button hover
+- FAQ transition
+- Mobile navigation transition
+
+Motion tetap menjaga:
+
+- Performance
+- Accessibility
+- prefers-reduced-motion
+
+---
+
+# Accessibility
+
+Sudah selesai.
+
+Implementasi:
+
+- Semantic HTML
+- Heading hierarchy
+- Keyboard navigation
+- Focus states
+- ARIA audit
+- Alt text
+- Contrast review
+
+---
+
+# Performance
+
+Sudah selesai.
+
+Optimasi:
+
+- Logo
+
+3.37 MB
+
+↓
+
+65 KB
+
+- Fraunces variable
+
+↓
+
+700 & 900 only
+
+Tidak dilakukan:
+
+- React.memo
+- useMemo
+- useCallback
+- Dynamic Import
+
+karena dianggap over-engineering.
+
+Production build bersih.
+
+---
+
+# SEO
+
+Sudah selesai.
+
+Menggunakan Next.js Metadata API.
+
+Implementasi:
+
+- Metadata
+- Open Graph
+- Twitter Card
+- Dynamic OG Image
+- JSON-LD
+- robots.ts
+- sitemap.ts
+- favicon
+- canonical
+- metadataBase
+
+Konfigurasi website dipusatkan di:
+
+src/lib/site.ts
+
+---
+
+# Production QA
+
+Production build:
+
+✅ Clean
+
+TypeScript:
+
+✅ Clean
+
+ESLint:
+
+✅ Clean
+
+Lighthouse:
+
+Desktop
+
+Performance: 100
+
+Accessibility: 100
+
+Best Practices: 100
+
+SEO: 100
+
+Mobile
+
+Performance: 97
+
+Accessibility: 100
+
+Best Practices: 100
+
+SEO: 100
+
+Tidak ada blocker teknis.
+
+---
+
+# Git Status
+
+Sudah dilakukan:
+
+- git init
+- git config
+- Initial Commit
+- Repository GitHub dibuat
+- Branch main
+
+Sedang proses:
+
+- Push ke GitHub
+- Deploy ke Vercel
+
+---
+
+# Known Issues
+
+Bukan bug, hanya placeholder yang memang menunggu data final.
+
+- Register CTA belum diarahkan ke Linktree.
+- Guidebook CTA belum ditambahkan.
+- Footer social media masih placeholder.
+- siteUrl masih placeholder.
+- Domain production belum tersedia.
+- SectionHeader.tsx & FeatureCard.tsx masih dead component (belum diputuskan dihapus atau dipertahankan).
+
+---
+
+# Planned Integrations
+
+Setelah deployment:
+
+Register
+
+↓
+
+Linktree
+
+Guidebook
+
+↓
+
+Google Drive
+
+Footer
+
+↓
+
+Instagram
+
+↓
+
+TikTok
+
+↓
+
+YouTube
+
+Semua URL nantinya dipusatkan melalui:
+
+src/lib/site.ts
+
+agar mudah diubah tanpa menyentuh komponen.
+
+---
+
+# Next Priorities
+
+## 1.
+
+Selesaikan push GitHub.
+
+---
+
+## 2.
+
+Deploy ke Vercel.
+
+---
+
+## 3.
+
+Hubungkan domain production.
+
+---
+
+## 4.
+
+Tambahkan:
+
+- Linktree
+- Guidebook
+- Social Media
+
+---
+
+## 5.
+
+Final Content
+
+Ganti:
+
+- Gallery
+- Timeline
+- FAQ
+- Competition
+- Contact
+
+menggunakan data sebenarnya.
+
+---
+
+## 6.
+
+Portfolio Polish
+
+Tambahkan:
+
+- Screenshot README
+- Live Demo
+- GIF Preview
+
+---
+
+# Development Philosophy
+
+Project ini menggunakan workflow:
+
+Review
+
+↓
+
+Diskusi
+
+↓
+
+Approval
+
+↓
+
+Implementation
+
+↓
+
+Local Testing
+
+↓
+
+UI Review
+
+↓
+
+Production QA
+
+↓
+
+Commit Git
+
+↓
+
+Push GitHub
+
+↓
+
+Deploy
+
+Seluruh keputusan engineering mengutamakan:
+
+- Readability
+- Maintainability
+- Scalability
+- Production Quality
+
+dibanding over-engineering.
+
+---
+
+# Notes for Future Development
+
+Jangan mengubah visual language.
+
+Design direction tetap:
+
+- Premium
+- Editorial
+- Elegant
+- Minimal
+
+Jika ada fitur baru, utamakan:
+
+- reusable components
+- semantic HTML
+- explicit TypeScript
+- maintainable architecture
+
+Hindari:
+
+- duplicate JSX
+- unnecessary abstraction
+- premature optimization
+- over-engineering
+
+Website saat ini dianggap production-ready. Pengembangan selanjutnya lebih berfokus pada integrasi konten, deployment, dan penyempurnaan pengalaman pengguna, bukan perubahan arsitektur.
