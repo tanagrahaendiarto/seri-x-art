@@ -16,7 +16,7 @@ const focusableSelector =
 export default function CompetitionModal({ children }: CompetitionModalProps) {
   const router = useRouter();
   const dialogRef = useRef<HTMLElement>(null);
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const backButtonRef = useRef<HTMLButtonElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
 
   const closeModal = useCallback(() => router.back(), [router]);
@@ -61,7 +61,7 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
 
   useEffect(() => {
     previousFocusRef.current = document.activeElement as HTMLElement | null;
-    closeButtonRef.current?.focus();
+    backButtonRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -131,6 +131,7 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
       >
         <div className="flex items-center justify-between border-b border-white/10 px-6 py-5 sm:px-8">
           <button
+            ref={backButtonRef}
             type="button"
             onClick={closeModal}
             className="inline-flex items-center gap-3 rounded-full text-sm font-semibold text-[#A0A3B1] transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A]"
@@ -146,25 +147,6 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
               <path strokeLinecap="round" strokeLinejoin="round" d="m15 18-6-6 6-6" />
             </svg>
             Kembali ke Gallery
-          </button>
-
-          <button
-            ref={closeButtonRef}
-            type="button"
-            onClick={closeModal}
-            aria-label="Close competition details"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-[#A0A3B1] transition-colors duration-300 hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A]"
-          >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="h-5 w-5"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="m6 6 12 12M18 6 6 18" />
-            </svg>
           </button>
         </div>
 
