@@ -25,8 +25,8 @@ export const fadeInUp: Variants = {
   visible: { opacity: 1, y: 0, transition: revealTransition },
 };
 
-// Route changes use a shorter, subtler entrance than scroll reveals so the
-// content change feels continuous without delaying navigation.
+// Backdrop is the environment, not the subject — it resolves first and
+// faster than the panel, as a plain fade with no physicality of its own.
 export const modalBackdrop: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -35,12 +35,17 @@ export const modalBackdrop: Variants = {
   },
 };
 
+// Panel is the physical surface the user is being handed — a spring gives
+// it natural, weighted deceleration instead of a fixed-duration tween, and
+// settles a beat after the backdrop so the entrance reads as layered depth
+// rather than both elements resolving in lockstep.
 export const modalPanel: Variants = {
-  hidden: { opacity: 0, y: 12 },
+  hidden: { opacity: 0, y: 16, scale: 0.97 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: DURATION.modal, ease: EASE },
+    scale: 1,
+    transition: { type: "spring", stiffness: 380, damping: 32, mass: 0.9 },
   },
 };
 
