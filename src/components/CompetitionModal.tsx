@@ -1,0 +1,178 @@
+"use client";
+
+import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useLayoutEffect, useRef } from "react";
+import type { ReactNode } from "react";
+import { modalBackdrop, modalPanel } from "@/lib/motion";
+
+type CompetitionModalProps = {
+  children: ReactNode;
+};
+
+const focusableSelector =
+  'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+export default function CompetitionModal({ children }: CompetitionModalProps) {
+  const router = useRouter();
+  const dialogRef = useRef<HTMLElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
+
+  const closeModal = useCallback(() => router.back(), [router]);
+
+  useLayoutEffect(() => {
+    const scrollY = window.scrollY;
+    const body = document.body;
+    const documentElement = document.documentElement;
+    const originalBodyStyles = {
+      left: body.style.left,
+      overflow: body.style.overflow,
+      paddingRight: body.style.paddingRight,
+      position: body.style.position,
+      right: body.style.right,
+      top: body.style.top,
+      width: body.style.width,
+    };
+    const originalHtmlOverflow = documentElement.style.overflow;
+    const scrollbarWidth = window.innerWidth - documentElement.clientWidth;
+    const currentPaddingRight = Number.parseFloat(
+      window.getComputedStyle(body).paddingRight,
+    );
+
+    documentElement.style.overflow = "hidden";
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.right = "0";
+    body.style.left = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+
+    if (scrollbarWidth > 0) {
+      body.style.paddingRight = `${currentPaddingRight + scrollbarWidth}px`;
+    }
+
+    return () => {
+      documentElement.style.overflow = originalHtmlOverflow;
+      body.style.left = originalBodyStyles.left;
+      body.style.overflow = originalBodyStyles.overflow;
+      body.style.paddingRight = originalBodyStyles.paddingRight;
+      body.style.position = originalBodyStyles.position;
+      body.style.right = originalBodyStyles.right;
+      body.style.top = originalBodyStyles.top;
+      body.style.width = originalBodyStyles.width;
+
+      window.requestAnimationFrame(() => window.scrollTo(0, scrollY));
+    };
+  }, []);
+
+  useEffect(() => {
+    previousFocusRef.current = document.activeElement as HTMLElement | null;
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeModal();
+        return;
+      }
+
+      if (event.key !== "Tab" || !dialogRef.current) {
+        return;
+      }
+
+      const focusableElements = Array.from(
+        dialogRef.current.querySelectorAll<HTMLElement>(focusableSelector),
+      );
+
+      if (focusableElements.length === 0) {
+        event.preventDefault();
+        return;
+      }
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      previousFocusRef.current?.focus();
+    };
+  }, [closeModal]);
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[60] flex items-end bg-[#171D2D]/70 p-4 sm:items-center sm:p-8"
+      initial="hidden"
+      animate="visible"
+      variants={modalBackdrop}
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) {
+          closeModal();
+        }
+      }}
+    >
+      <motion.section
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="competition-title"
+        className="max-h-[calc(100dvh-2rem)] w-full overflow-y-auto rounded-xl border border-white/10 bg-[#20283A] shadow-2xl shadow-black/40 sm:max-h-[calc(100dvh-4rem)]"
+        initial="hidden"
+        animate="visible"
+        variants={modalPanel}
+      >
+        <div className="flex items-center justify-between border-b border-white/10 px-6 py-5 sm:px-8">
+          <button
+            type="button"
+            onClick={closeModal}
+            className="inline-flex items-center gap-3 rounded-full text-sm font-semibold text-[#A0A3B1] transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A]"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              className="h-5 w-5"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m15 18-6-6 6-6" />
+            </svg>
+            Kembali ke Gallery
+          </button>
+
+          <button
+            ref={closeButtonRef}
+            type="button"
+            onClick={closeModal}
+            aria-label="Close competition details"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-[#A0A3B1] transition-colors duration-300 hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A]"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              className="h-5 w-5"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="p-6 sm:p-8 lg:p-12">{children}</div>
+      </motion.section>
+    </motion.div>
+  );
+}

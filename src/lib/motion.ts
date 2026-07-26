@@ -7,6 +7,7 @@ export const EASE = [0.16, 1, 0.3, 1] as const;
 export const DURATION = {
   reveal: 0.6,
   hover: 0.3,
+  modal: 0.2,
 } as const;
 
 export const revealTransition: Transition = {
@@ -22,6 +23,25 @@ export const hoverTransition: Transition = {
 export const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: revealTransition },
+};
+
+// Route changes use a shorter, subtler entrance than scroll reveals so the
+// content change feels continuous without delaying navigation.
+export const modalBackdrop: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: DURATION.modal, ease: EASE },
+  },
+};
+
+export const modalPanel: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: DURATION.modal, ease: EASE },
+  },
 };
 
 // Viewport options for scroll-triggered reveals: trigger once, slightly

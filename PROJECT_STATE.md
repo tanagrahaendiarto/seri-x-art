@@ -1,6 +1,6 @@
 # PROJECT_STATE
 
-Last Updated: 2026-07-06 (Post Sprint 7 — Motion Design System)
+Last Updated: 2026-07-26 (Competition Detail Modal Navigation)
 
 ---
 
@@ -54,6 +54,8 @@ Tech Stack:
 
 ✅ Sprint 7 — Motion Design System
 
+✅ Competition Detail Pages & Modal Navigation
+
 ---
 
 # Current Architecture
@@ -70,6 +72,17 @@ Landing Page terdiri dari:
 - Footer
 
 Semua section sudah selesai dan dianggap production-ready.
+
+Competition detail pages are available through dynamic routes at
+`/competition/[slug]`. Gallery content is centralized in
+`src/data/competitions.ts`, so each route shares one template while its slug,
+title, category, description, and image remain data-driven. Navigation from
+the Gallery is intercepted into an accessible modal that keeps the landing
+page and its scroll position visible; direct visits still render the full
+detail page for SEO and sharing.
+
+The shared registration destination is configured in `src/lib/site.ts` and
+currently awaits the published Google Form URL.
 
 ---
 

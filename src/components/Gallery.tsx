@@ -1,5 +1,5 @@
 import GalleryCard from "@/components/GalleryCard";
-import { galleryItems } from "@/components/galleryItems";
+import { competitions } from "@/data/competitions";
 import Reveal from "@/components/Reveal";
 
 export default function Gallery() {
@@ -30,12 +30,10 @@ export default function Gallery() {
 
         {/* Gallery grid */}
         <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {galleryItems.map((item) => (
+          {competitions.map((competition) => (
             <GalleryCard
-              key={item.title}
-              image={item.image}
-              title={item.title}
-              category={item.category}
+              key={competition.slug}
+              competition={competition}
             />
           ))}
         </div>
