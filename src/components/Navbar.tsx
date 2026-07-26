@@ -125,7 +125,14 @@ export default function Navbar() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    setTimeout(() => {
+                      const target = document.querySelector(item.href);
+                      target?.scrollIntoView({ behavior: "smooth" });
+                    }, 350);
+                  }}
                   className="transition-colors duration-300 hover:text-white"
                 >
                   {item.label}
