@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Poppins } from "next/font/google";
 import ScrollRestoration from "@/components/ScrollRestoration";
 import MotionProvider from "@/components/MotionProvider";
+import PresenceBoundary from "@/components/PresenceBoundary";
 import { siteName, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -66,7 +67,7 @@ export default function RootLayout({
         <ScrollRestoration />
         <MotionProvider>
           {children}
-          {modal}
+          <PresenceBoundary>{modal}</PresenceBoundary>
         </MotionProvider>
       </body>
     </html>

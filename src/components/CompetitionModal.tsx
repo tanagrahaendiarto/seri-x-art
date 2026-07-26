@@ -110,6 +110,7 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
       className="fixed inset-0 z-[60] flex items-end bg-[#171D2D]/70 p-4 sm:items-center sm:p-8"
       initial="hidden"
       animate="visible"
+      exit="hidden"
       variants={modalBackdrop}
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) {
@@ -125,6 +126,7 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
         className="max-h-[calc(100dvh-2rem)] w-full overscroll-contain overflow-y-auto rounded-xl border border-white/10 bg-[#20283A] shadow-2xl shadow-black/40 sm:max-h-[calc(100dvh-4rem)]"
         initial="hidden"
         animate="visible"
+        exit="hidden"
         variants={modalPanel}
       >
         <div className="flex items-center justify-between border-b border-white/10 px-6 py-5 sm:px-8">
