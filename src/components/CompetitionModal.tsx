@@ -26,11 +26,8 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
     const body = document.body;
     const documentElement = document.documentElement;
     const originalBodyStyles = {
-      left: body.style.left,
-      overflow: body.style.overflow,
       paddingRight: body.style.paddingRight,
       position: body.style.position,
-      right: body.style.right,
       top: body.style.top,
       width: body.style.width,
     };
@@ -43,10 +40,7 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
     documentElement.style.overflow = "hidden";
     body.style.position = "fixed";
     body.style.top = `-${scrollY}px`;
-    body.style.right = "0";
-    body.style.left = "0";
     body.style.width = "100%";
-    body.style.overflow = "hidden";
 
     if (scrollbarWidth > 0) {
       body.style.paddingRight = `${currentPaddingRight + scrollbarWidth}px`;
@@ -54,15 +48,14 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
 
     return () => {
       documentElement.style.overflow = originalHtmlOverflow;
-      body.style.left = originalBodyStyles.left;
-      body.style.overflow = originalBodyStyles.overflow;
       body.style.paddingRight = originalBodyStyles.paddingRight;
       body.style.position = originalBodyStyles.position;
-      body.style.right = originalBodyStyles.right;
       body.style.top = originalBodyStyles.top;
       body.style.width = originalBodyStyles.width;
 
-      window.requestAnimationFrame(() => window.scrollTo(0, scrollY));
+      // Explicit "instant" so this restoration never inherits the global
+      // `scroll-behavior: smooth` and animates back into position.
+      window.scrollTo({ top: scrollY, left: 0, behavior: "instant" });
     };
   }, []);
 
@@ -106,7 +99,9 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      previousFocusRef.current?.focus();
+      if (previousFocusRef.current?.isConnected) {
+        previousFocusRef.current.focus({ preventScroll: true });
+      }
     };
   }, [closeModal]);
 
@@ -127,7 +122,7 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="competition-title"
-        className="max-h-[calc(100dvh-2rem)] w-full overflow-y-auto rounded-xl border border-white/10 bg-[#20283A] shadow-2xl shadow-black/40 sm:max-h-[calc(100dvh-4rem)]"
+        className="max-h-[calc(100dvh-2rem)] w-full overscroll-contain overflow-y-auto rounded-xl border border-white/10 bg-[#20283A] shadow-2xl shadow-black/40 sm:max-h-[calc(100dvh-4rem)]"
         initial="hidden"
         animate="visible"
         variants={modalPanel}
