@@ -12,7 +12,7 @@ const description =
 
 const fraunces = Fraunces({
   variable: "--font-display",
-  weight: ["700", "900"],
+  weight: ["600", "700", "900"],
   subsets: ["latin"],
 });
 

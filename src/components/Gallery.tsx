@@ -6,7 +6,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative scroll-mt-20 overflow-hidden bg-[linear-gradient(to_bottom,#20283A_80%,#171D2D)] py-32 text-white"
+      className="relative scroll-mt-20 overflow-hidden bg-[linear-gradient(to_bottom,#20283A_80%,#171D2D)] py-14 text-white sm:py-20 lg:py-24"
     >
       {/* Ambient glow */}
       <div className="pointer-events-none absolute left-1/2 top-24 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[#A171D5]/10 blur-3xl" />
@@ -29,7 +29,7 @@ export default function Gallery() {
         </div>
 
         {/* Gallery grid */}
-        <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-12 sm:grid-cols-2 sm:gap-7 lg:mt-16 lg:grid-cols-3 lg:gap-8">
           {competitions.map((competition) => (
             <GalleryCard
               key={competition.slug}

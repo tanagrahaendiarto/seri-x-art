@@ -27,7 +27,7 @@ export default function Competition() {
   return (
     <section
       id="competition"
-      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#20283A_80%,#171D2D)] py-32 text-white"
+      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#20283A_80%,#171D2D)] py-14 text-white sm:py-20 lg:py-24"
     >
       <Reveal className="mx-auto max-w-7xl px-8">
         <div className="max-w-2xl">
@@ -45,11 +45,11 @@ export default function Competition() {
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-x-16 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-x-16 sm:mt-12 md:grid-cols-2 lg:mt-16">
           {competitions.map((competition, index) => (
             <div
               key={competition.title}
-              className={`border-t border-white/10 py-10 ${
+              className={`border-t border-white/10 py-8 lg:py-10 ${
                 index % 2 === 1 ? "md:mt-16" : ""
               }`}
             >

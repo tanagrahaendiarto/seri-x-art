@@ -32,7 +32,7 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-32 text-white"
+      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
     >
       <Reveal className="mx-auto max-w-7xl px-8">
         <div className="max-w-2xl">
@@ -50,11 +50,11 @@ export default function Timeline() {
           </p>
         </div>
 
-        <div className="relative mt-20 max-w-3xl">
+        <div className="relative mt-8 max-w-3xl sm:mt-12 lg:mt-16">
           {/* Journey line */}
           <div className="absolute bottom-2 left-2 top-2 w-px bg-white/10" />
 
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-8 sm:gap-10 lg:gap-12">
             {timelineSteps.map((timelineStep) => (
               <TimelineItem
                 key={timelineStep.title}

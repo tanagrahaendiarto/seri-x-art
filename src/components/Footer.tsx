@@ -28,7 +28,7 @@ const linkClassName =
 export default function Footer() {
   return (
     <footer className="bg-[#20283A] text-white">
-      <Reveal className="mx-auto max-w-7xl px-8 py-32">
+      <Reveal className="mx-auto max-w-7xl px-8 py-12 sm:py-16 lg:py-20">
         {/* Brand statement */}
         <div className="max-w-2xl">
           <h2 className="text-4xl font-bold sm:text-5xl">Seri X Art</h2>
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         {/* Links */}
-        <div className="mt-16 grid grid-cols-1 gap-10 border-t border-white/10 pt-10 sm:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-10 border-t border-white/10 pt-8 sm:mt-12 sm:grid-cols-3 lg:mt-14 lg:pt-10">
           <FooterSection title="Navigation">
             <ul className="space-y-3">
               {navigation.map((item) => (
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 flex flex-col gap-2 border-t border-white/10 pt-8 text-sm text-[#A0A3B1] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-[#A0A3B1] sm:mt-10 sm:flex-row sm:items-center sm:justify-between lg:mt-12 lg:pt-8">
           <p>© 2026 Seri X Art. All Rights Reserved.</p>
           <p>Developed by Biro Riset dan Teknologi</p>
         </div>

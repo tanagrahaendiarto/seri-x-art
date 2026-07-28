@@ -28,7 +28,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-32 text-white"
+      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
     >
       <Reveal className="mx-auto max-w-7xl px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12">
@@ -47,7 +47,7 @@ export default function FAQ() {
               Art competition.
             </p>
 
-            <div className="mt-12 max-w-md border-t border-white/10 pt-8">
+            <div className="mt-8 max-w-md border-t border-white/10 pt-6 lg:mt-12 lg:pt-8">
               <p className="text-sm font-semibold text-white">
                 Still have questions?
               </p>
