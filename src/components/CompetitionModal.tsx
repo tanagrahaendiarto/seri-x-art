@@ -144,7 +144,11 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
               strokeWidth="1.5"
               className="h-5 w-5"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="m15 18-6-6 6-6" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m15 18-6-6 6-6"
+              />
             </svg>
             Kembali ke Gallery
           </button>

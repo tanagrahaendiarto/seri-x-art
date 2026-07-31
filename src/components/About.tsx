@@ -2,24 +2,6 @@ import AboutMascot from "@/components/AboutMascot";
 import Reveal from "@/components/Reveal";
 
 export default function About() {
-  const highlights = [
-    {
-      title: "Ekspresi Kreatif",
-      description:
-        "Ruang bagi mahasiswa menuangkan ide dan bakat lewat beragam cabang seni.",
-    },
-    {
-      title: "7 Kategori Lomba",
-      description:
-        "Textile Painting, Fashion Show, Band, Tari Kreasi, Music Video, Twibbon, hingga Tenant.",
-    },
-    {
-      title: "Perayaan Budaya",
-      description:
-        "Kekayaan budaya Nusantara hadir lewat kompetisi, kolaborasi, dan apresiasi karya mahasiswa.",
-    },
-  ];
-
   return (
     <section
       id="about"
@@ -39,10 +21,10 @@ export default function About() {
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-[#A0A3B1]">
-            Seri X Art Exhibition 2026 adalah pagelaran seni dan budaya
-            tahunan, hadir sebagai bagian dari Dies Natalis IPB University. Di
-            sinilah mahasiswa KM PKU IPB University, khususnya Angkatan 63,
-            menemukan ruang untuk berekspresi, berkarya, dan diapresiasi.
+            Seri X Art Exhibition 2026 adalah pagelaran seni dan budaya tahunan,
+            hadir sebagai bagian dari Dies Natalis IPB University. Di sinilah
+            mahasiswa KM PKU IPB University, khususnya Angkatan 63, menemukan
+            ruang untuk berekspresi, berkarya, dan diapresiasi.
           </p>
 
           <p className="mt-6 max-w-xl text-xl font-medium leading-relaxed text-[#F1D2B1]">
@@ -50,23 +32,6 @@ export default function About() {
             kreativitas, kolaborasi, dan kekayaan budaya Indonesia dalam satu
             panggung seni.
           </p>
-
-          {/* Editorial list */}
-          <dl className="mt-8 divide-y divide-white/10 border-t border-white/10 sm:mt-10 lg:mt-12">
-            {highlights.map((highlight) => (
-              <div
-                key={highlight.title}
-                className="grid grid-cols-1 gap-2 py-6 sm:grid-cols-3 sm:gap-8 lg:py-8"
-              >
-                <dt className="text-xl font-semibold text-white sm:col-span-1">
-                  {highlight.title}
-                </dt>
-                <dd className="text-base leading-7 text-[#A0A3B1] sm:col-span-2">
-                  {highlight.description}
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
 
         {/* Visual */}

@@ -30,7 +30,10 @@ export default function CompetitionDetailContent({
         <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#A0A3B1]">
           {competition.category}
         </p>
-        <h1 id="competition-title" className="mt-4 text-5xl font-bold leading-[1.05] sm:text-6xl">
+        <h1
+          id="competition-title"
+          className="mt-4 text-5xl font-bold leading-[1.05] sm:text-6xl"
+        >
           {competition.title}
         </h1>
 
