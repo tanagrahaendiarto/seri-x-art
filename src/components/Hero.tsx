@@ -1,13 +1,39 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
-import { buttonHover, fadeInUp, staggerContainer } from "@/lib/motion";
+import { fadeInUp, revealTransition, staggerContainer } from "@/lib/motion";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[calc(100vh-7rem)] items-center justify-center bg-gradient-to-b from-[#20283A] to-[#171D2D]">
+    <section className="relative flex min-h-[calc(100vh-7rem)] items-center justify-center overflow-hidden bg-gradient-to-b from-[#20283A] to-[#171D2D]">
+      {/* Decorative emblem — atmosphere only, never the focal point */}
       <motion.div
-        className="mx-auto max-w-4xl px-4 text-center sm:px-8"
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={revealTransition}
+      >
+        <div className="relative h-96 w-96 translate-y-[-36%] opacity-[0.14] sm:translate-y-[-8%] sm:opacity-[0.18] md:h-120 md:w-120 lg:h-160 lg:w-160 lg:opacity-[0.22] xl:h-192 xl:w-3xl">
+          <Image
+            src="/logo.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 384px, (max-width: 1024px) 480px, (max-width: 1280px) 640px, 768px"
+            className="object-contain blur-[2px]"
+          />
+        </div>
+      </motion.div>
+
+      {/* Soft vignette — blends the emblem into the background and keeps text contrast */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-1 bg-[radial-gradient(ellipse_85%_80%_at_50%_42%,transparent_0%,transparent_55%,rgba(23,29,45,0.5)_85%,rgba(23,29,45,0.85)_100%)]"
+      />
+
+      <motion.div
+        className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-8"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
@@ -34,28 +60,26 @@ export default function Hero() {
           Platform kompetisi seni bagi mahasiswa untuk berekspresi, berkarya,
           dan merayakan kreativitas Indonesia.
         </motion.p>
-
-        <motion.div
-          variants={fadeInUp}
-          className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
-        >
-          <motion.button
-            type="button"
-            {...buttonHover}
-            className="w-full rounded-full bg-[#DF9621] px-8 py-4 font-semibold text-[#171D2D] transition-colors duration-300 hover:bg-[#DF9621]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171D2D] sm:w-auto"
-          >
-            Daftar Sekarang
-          </motion.button>
-
-          <motion.button
-            type="button"
-            {...buttonHover}
-            className="w-full rounded-full border border-white/20 px-8 py-4 font-semibold text-white transition-colors duration-300 hover:border-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171D2D] sm:w-auto"
-          >
-            GUIDEBOOK
-          </motion.button>
-        </motion.div>
       </motion.div>
+
+      {/* Scroll indicator — closes out the Hero, not a CTA */}
+      <motion.a
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        href="#about"
+        className="absolute inset-x-0 bottom-8 z-10 mx-auto flex w-fit flex-col items-center gap-3 rounded-sm text-sm font-light tracking-wide text-[#A0A3B1] transition-colors duration-300 hover:text-white/80 focus-visible:text-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171D2D] sm:bottom-10 lg:bottom-12"
+      >
+        <span>Mari Menjelajah</span>
+        <motion.span
+          aria-hidden="true"
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="text-xl"
+        >
+          ⌄
+        </motion.span>
+      </motion.a>
     </section>
   );
 }

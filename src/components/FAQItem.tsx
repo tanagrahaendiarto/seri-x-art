@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+import type { ReactNode } from "react";
 import { hoverTransition } from "@/lib/motion";
 
 type FAQItemProps = {
   id: string;
   question: string;
-  answer: string;
+  answer: ReactNode;
 };
 
 export default function FAQItem({ id, question, answer }: FAQItemProps) {
