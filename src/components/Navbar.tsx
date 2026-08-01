@@ -10,17 +10,18 @@ const navItems = [
     label: "About",
     href: "#about",
   },
-  {
-    label: "Competition",
-    href: "#competition",
-  },
+  // Competition menu hidden temporarily, awaiting final content. Uncomment to restore.
+  // {
+  //   label: "Competition",
+  //   href: "#competition",
+  // },
   {
     label: "Timeline",
     href: "#timeline",
   },
   {
-    label: "Gallery",
-    href: "#gallery",
+    label: "Open Recruitment",
+    href: "#open-recruitment",
   },
   {
     label: "FAQ",

@@ -1,12 +1,15 @@
 import AboutMascot from "@/components/AboutMascot";
 import Reveal from "@/components/Reveal";
+import SectionOrnament from "@/components/SectionOrnament";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
+      className="relative isolate scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
     >
+      <SectionOrnament section="about" />
+
       <Reveal className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-8 lg:grid-cols-12 lg:gap-12">
         {/* Narrative */}
         <div className="lg:col-span-7">

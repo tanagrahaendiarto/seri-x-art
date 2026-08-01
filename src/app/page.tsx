@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Competition from "@/components/Competition";
+// Competition section hidden temporarily, awaiting final content. Uncomment to restore.
+// import Competition from "@/components/Competition";
 import Timeline from "@/components/Timeline";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
@@ -50,7 +51,8 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <About />
-        <Competition />
+        {/* Competition section hidden temporarily, awaiting final content. Uncomment to restore. */}
+        {/* <Competition /> */}
         <Timeline />
         <Gallery />
         <FAQ />

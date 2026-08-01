@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import SectionOrnament from "@/components/SectionOrnament";
 
 export default function Competition() {
   const competitions = [
@@ -19,16 +20,17 @@ export default function Competition() {
     },
     {
       title: "Painting",
-      description:
-        "Showcase traditional and contemporary painting techniques.",
+      description: "Showcase traditional and contemporary painting techniques.",
     },
   ];
 
   return (
     <section
       id="competition"
-      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#20283A_80%,#171D2D)] py-14 text-white sm:py-20 lg:py-24"
+      className="relative isolate scroll-mt-20 bg-[linear-gradient(to_bottom,#20283A_80%,#171D2D)] py-14 text-white sm:py-20 lg:py-24"
     >
+      <SectionOrnament section="competition" />
+
       <Reveal className="mx-auto max-w-7xl px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#A0A3B1]">
@@ -40,8 +42,8 @@ export default function Competition() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-[#A0A3B1]">
-            Discover various competition categories designed to challenge
-            your creativity and showcase your artistic talent.
+            Discover various competition categories designed to challenge your
+            creativity and showcase your artistic talent.
           </p>
         </div>
 

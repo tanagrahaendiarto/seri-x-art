@@ -1,12 +1,13 @@
 import FooterSection from "./FooterSection";
 import Reveal from "@/components/Reveal";
+import SectionOrnament from "@/components/SectionOrnament";
 
 const navigation = [
   { label: "Home", href: "#" },
   { label: "About", href: "#about" },
   { label: "Competition", href: "#competition" },
   { label: "Timeline", href: "#timeline" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Open Recruitment", href: "#open-recruitment" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -27,21 +28,23 @@ const linkClassName =
 
 export default function Footer() {
   return (
-    <footer className="bg-[#20283A] text-white">
+    <footer className="relative isolate bg-[#20283A] text-white">
+      <SectionOrnament section="footer" />
+
       <Reveal className="mx-auto max-w-7xl px-8 py-12 sm:py-16 lg:py-20">
         {/* Brand statement */}
         <div className="max-w-2xl">
           <h2 className="text-4xl font-bold sm:text-5xl">Seri X Art</h2>
 
           <p lang="id" className="mt-6 text-lg leading-8 text-[#A0A3B1]">
-            Seri X Art merupakan kompetisi seni modern yang menjadi wadah
-            bagi generasi muda untuk berkarya, berkolaborasi, dan
-            menunjukkan kreativitas terbaiknya.
+            Seri X Art merupakan kompetisi seni modern yang menjadi wadah bagi
+            generasi muda untuk berkarya, berkolaborasi, dan menunjukkan
+            kreativitas terbaiknya.
           </p>
 
           <p className="mt-6 text-xl font-medium leading-relaxed text-[#F1D2B1]">
-            Where every stroke tells a story, and every artist finds
-            their stage.
+            Where every stroke tells a story, and every artist finds their
+            stage.
           </p>
         </div>
 

@@ -3,10 +3,13 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { fadeInUp, revealTransition, staggerContainer } from "@/lib/motion";
+import SectionOrnament from "@/components/SectionOrnament";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[calc(100vh-7rem)] items-center justify-center overflow-hidden bg-gradient-to-b from-[#20283A] to-[#171D2D]">
+    <section className="relative isolate flex min-h-[calc(100vh-7rem)] items-center justify-center overflow-hidden bg-gradient-to-b from-[#20283A] to-[#171D2D]">
+      <SectionOrnament section="hero" />
+
       {/* Decorative emblem — atmosphere only, never the focal point */}
       <motion.div
         aria-hidden="true"

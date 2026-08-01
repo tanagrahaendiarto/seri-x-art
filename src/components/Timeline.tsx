@@ -1,30 +1,49 @@
 import TimelineItem from "@/components/TimelineItem";
 import Reveal from "@/components/Reveal";
+import SectionOrnament from "@/components/SectionOrnament";
 
 export default function Timeline() {
   const timelineSteps = [
     {
-      title: "Registration",
-      date: "July 1 - July 15",
-      description: "Sign up and secure your spot in the competition.",
+      title: "Open Registration",
+      date: "20–29 Agustus 2026",
+      description:
+        "Periode pendaftaran resmi seluruh rangkaian Seri X Art Exhibition 2026. Peserta dapat memilih kategori lomba yang diinginkan dan melengkapi proses registrasi.",
       isActive: true,
     },
     {
-      title: "Submission",
-      date: "July 16 - July 25",
-      description: "Submit your best work within your chosen category.",
+      title: "Pra-Event",
+      date: "26–28 Agustus 2026",
+      description:
+        "Rangkaian kegiatan pra-acara sebagai pembuka menuju Seri X Art Exhibition 2026 serta membangun antusiasme peserta dan pengunjung.",
       isActive: false,
     },
     {
-      title: "Judging",
-      date: "July 26 - July 30",
-      description: "Our curators review every submission with care.",
+      title: "Opening Ceremony",
+      date: "30 Agustus 2026",
+      description:
+        "Pembukaan resmi Seri X Art Exhibition 2026 sekaligus dimulainya seluruh rangkaian kegiatan Wonderland Nusantara.",
       isActive: false,
     },
     {
-      title: "Winner",
-      date: "August 1",
-      description: "Winners are announced and celebrated across all categories.",
+      title: "Technical Meeting",
+      date: "31 Agustus 2026",
+      description:
+        "Penyampaian informasi teknis, peraturan, dan mekanisme pelaksanaan kepada seluruh peserta sesuai cabang lomba masing-masing.",
+      isActive: false,
+    },
+    {
+      title: "Main Event",
+      date: "01–13 September 2026",
+      description:
+        "Pelaksanaan seluruh kompetisi, pameran, pertunjukan, serta berbagai aktivitas utama Seri X Art Exhibition 2026.",
+      isActive: false,
+    },
+    {
+      title: "Closing Ceremony",
+      date: "20 September 2026",
+      description:
+        "Penutupan resmi Seri X Art Exhibition 2026, pengumuman apresiasi, serta perayaan seluruh rangkaian kegiatan.",
       isActive: false,
     },
   ];
@@ -32,8 +51,10 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
+      className="relative isolate scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
     >
+      <SectionOrnament section="timeline" />
+
       <Reveal className="mx-auto max-w-7xl px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#A0A3B1]">

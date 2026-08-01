@@ -1,5 +1,6 @@
 import FAQItem from "@/components/FAQItem";
 import Reveal from "@/components/Reveal";
+import SectionOrnament from "@/components/SectionOrnament";
 
 export default function FAQ() {
   const faqItems = [
@@ -15,8 +16,7 @@ export default function FAQ() {
     },
     {
       question: "Is there a registration fee?",
-      answer:
-        "No. Registration is completely free for all participants.",
+      answer: "No. Registration is completely free for all participants.",
     },
     {
       question: "Where will the winners be announced?",
@@ -28,8 +28,10 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
+      className="relative isolate scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
     >
+      <SectionOrnament section="faq" />
+
       <Reveal className="mx-auto max-w-7xl px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12">
           {/* Heading + help block */}
@@ -43,8 +45,8 @@ export default function FAQ() {
             </h2>
 
             <p className="mt-6 max-w-md text-lg leading-8 text-[#A0A3B1]">
-              Find answers to the most common questions about the Seri X
-              Art competition.
+              Find answers to the most common questions about the Seri X Art
+              competition.
             </p>
 
             <div className="mt-8 max-w-md border-t border-white/10 pt-6 lg:mt-12 lg:pt-8">

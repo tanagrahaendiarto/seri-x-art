@@ -8,12 +8,18 @@ import { modalBackdrop, modalPanel } from "@/lib/motion";
 
 type CompetitionModalProps = {
   children: ReactNode;
+  titleId?: string;
+  backLabel?: string;
 };
 
 const focusableSelector =
   'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-export default function CompetitionModal({ children }: CompetitionModalProps) {
+export default function CompetitionModal({
+  children,
+  titleId = "competition-title",
+  backLabel = "Kembali ke Gallery",
+}: CompetitionModalProps) {
   const router = useRouter();
   const dialogRef = useRef<HTMLElement>(null);
   const backButtonRef = useRef<HTMLButtonElement>(null);
@@ -122,7 +128,7 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
-        aria-labelledby="competition-title"
+        aria-labelledby={titleId}
         className="max-h-[calc(100dvh-2rem)] w-full overscroll-contain overflow-y-auto rounded-xl border border-white/10 bg-[#20283A] shadow-2xl shadow-black/40 sm:max-h-[calc(100dvh-4rem)]"
         initial="hidden"
         animate="visible"
@@ -150,7 +156,7 @@ export default function CompetitionModal({ children }: CompetitionModalProps) {
                 d="m15 18-6-6 6-6"
               />
             </svg>
-            Kembali ke Gallery
+            {backLabel}
           </button>
         </div>
 
