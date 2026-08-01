@@ -6,6 +6,7 @@ export type OpenRecruitmentItem = {
   image: string;
   cta: string;
   href?: string;
+  guidebookUrl?: string;
   locked?: boolean;
 };
 
@@ -36,6 +37,8 @@ export const openRecruitment: OpenRecruitmentItem[] = [
     image: "/images/gallery/sera.png",
     cta: "Registrasi",
     href: "https://forms.gle/LaRznsbxQFyYZpdd7",
+    guidebookUrl:
+      "https://drive.google.com/file/d/1awWLNckRNPGAN3d1DmxdRcU3M8km3CF-/view?usp=drivesdk",
   },
   {
     slug: "oprec-perlombaan",
