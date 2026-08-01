@@ -53,8 +53,8 @@ export const footer = {
     },
     {
       label: "TikTok",
-      handle: "@sxae26",
-      href: "https://tiktok.com/@sxae26",
+      handle: "@sxae2026",
+      href: "https://www.tiktok.com/@sxae2026",
       icon: "tiktok",
     },
     {
