@@ -16,7 +16,7 @@ export const footer = {
   brand: {
     name: "Seri X Art Exhibition 2026",
     description:
-      "Seri X Art Exhibition 2026 merupakan program unggulan Departemen Seni dan Budaya Ormawa Eksekutif PKU IPB yang menjadi wadah bagi mahasiswa untuk berekspresi, berkompetisi, dan mengapresiasi seni melalui tema Wonderland Nusantara.",
+      "Seri X Art Exhibition 2026 merupakan wadah berkarya, berkompetisi, dan mengapresiasi seni bagi mahasiswa KM PKU IPB melalui tema Wonderland Nusantara.",
     tagline: "Merayakan kreativitas, menghidupkan budaya.",
   },
   navigation: [
@@ -39,18 +39,21 @@ export const footer = {
       label: "Instagram",
       handle: "@serixart_ipb",
       href: "https://instagram.com/serixart_ipb",
+      icon: "instagram",
     },
     {
       label: "TikTok",
       handle: "@sxae26",
       href: "https://tiktok.com/@sxae26",
+      icon: "tiktok",
     },
     {
       label: "YouTube",
       handle: "@ormawaeksekutifpkuipb",
       href: "https://youtube.com/@ormawaeksekutifpkuipb",
+      icon: "youtube",
     },
   ],
   copyright: "© 2026 Seri X Art Exhibition. All Rights Reserved.",
   credit: "Website developed by Biro Riset dan Teknologi",
-};
+} as const;

@@ -16,7 +16,11 @@ export default function FAQItem({ id, question, answer }: FAQItemProps) {
   const panelId = `${id}-panel`;
 
   return (
-    <div className="border-t border-white/10 py-6">
+    <div
+      className={`border-t py-6 transition-colors duration-300 ${
+        isOpen ? "border-[#DF9621]/25" : "border-white/10"
+      }`}
+    >
       <h3>
         <button
           type="button"
@@ -25,7 +29,11 @@ export default function FAQItem({ id, question, answer }: FAQItemProps) {
           aria-controls={panelId}
           className="flex w-full items-center justify-between gap-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5]"
         >
-          <span className="text-lg font-semibold text-white sm:text-xl">
+          <span
+            className={`text-lg font-semibold transition-colors duration-300 sm:text-xl ${
+              isOpen ? "text-white" : "text-white/80"
+            }`}
+          >
             {question}
           </span>
 
@@ -36,8 +44,8 @@ export default function FAQItem({ id, question, answer }: FAQItemProps) {
             strokeWidth={1.5}
             stroke="currentColor"
             aria-hidden="true"
-            className={`h-5 w-5 shrink-0 text-[#A0A3B1] transition-transform duration-300 ${
-              isOpen ? "rotate-180" : "rotate-0"
+            className={`h-5 w-5 shrink-0 transition-all duration-300 ${
+              isOpen ? "rotate-180 text-white" : "rotate-0 text-white/80"
             }`}
           >
             <path
@@ -56,7 +64,9 @@ export default function FAQItem({ id, question, answer }: FAQItemProps) {
         transition={hoverTransition}
         style={{ overflow: "hidden" }}
       >
-        <p className="mt-4 leading-7 text-[#A0A3B1]">{answer}</p>
+        <p lang="id" className="mt-4 leading-7 text-[#A0A3B1]">
+          {answer}
+        </p>
       </motion.div>
     </div>
   );

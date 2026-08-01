@@ -1,27 +1,39 @@
 import FAQItem from "@/components/FAQItem";
 import Reveal from "@/components/Reveal";
 import SectionOrnament from "@/components/SectionOrnament";
+import { footer } from "@/lib/site";
 
 export default function FAQ() {
   const faqItems = [
     {
-      question: "Who can participate in Seri X Art?",
+      question: "Apa itu Seri X Art Exhibition 2026?",
       answer:
-        "Seri X Art is open to students, young artists, and creative enthusiasts from various backgrounds.",
+        "Seri X Art Exhibition 2026 merupakan program unggulan Departemen Seni dan Budaya Ormawa Eksekutif PKU IPB yang menjadi wadah bagi mahasiswa untuk berkarya, berkompetisi, dan mengapresiasi seni melalui tema Wonderland Nusantara.",
     },
     {
-      question: "How many competition categories are available?",
+      question: "Siapa yang dapat mengikuti Seri X Art Exhibition 2026?",
       answer:
-        "Participants can compete in Digital Art, Illustration, Photography, Animation, and 3D Art.",
+        "Kompetisi terbuka bagi mahasiswa KM PKU IPB sesuai ketentuan pada masing-masing cabang lomba. Khusus untuk Malam Puncak, acara akan terbuka untuk masyarakat umum.",
     },
     {
-      question: "Is there a registration fee?",
-      answer: "No. Registration is completely free for all participants.",
+      question: "Cabang lomba apa saja yang tersedia?",
+      answer:
+        "Terdapat tujuh cabang lomba yang dapat diikuti, yaitu Band, Fashion Show, Tari Kreasi, Textile Painting, Music Video, Twibbon, dan Tenant.",
     },
     {
-      question: "Where will the winners be announced?",
+      question: "Bagaimana cara mendaftar?",
       answer:
-        "The winners will be announced on the official Seri X Art website and social media platforms.",
+        "Pendaftaran dilakukan melalui website resmi Seri X Art Exhibition 2026. Pilih cabang lomba yang diinginkan, lengkapi formulir pendaftaran, kemudian ikuti seluruh tahapan registrasi sesuai ketentuan yang berlaku.",
+    },
+    {
+      question: "Di mana saya bisa mendapatkan informasi terbaru?",
+      answer:
+        "Seluruh informasi mengenai jadwal, guidebook, pengumuman, hasil lomba, dan pembaruan acara akan diumumkan melalui website serta media sosial resmi Seri X Art Exhibition 2026.",
+    },
+    {
+      question: "Apakah seluruh cabang lomba dipungut biaya?",
+      answer:
+        "Informasi mengenai biaya pendaftaran dapat dilihat pada guidebook masing-masing cabang lomba. Ketentuan dapat berbeda sesuai kategori yang dipilih.",
     },
   ];
 
@@ -41,28 +53,43 @@ export default function FAQ() {
             </p>
 
             <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
-              Frequently Asked Questions
+              Pertanyaan yang Sering Diajukan
             </h2>
 
-            <p className="mt-6 max-w-md text-lg leading-8 text-[#A0A3B1]">
-              Find answers to the most common questions about the Seri X Art
-              competition.
+            <p lang="id" className="mt-6 max-w-md text-lg leading-8 text-[#A0A3B1]">
+              Temukan jawaban atas pertanyaan yang paling sering diajukan
+              mengenai Seri X Art Exhibition 2026.
             </p>
 
             <div className="mt-8 max-w-md border-t border-white/10 pt-6 lg:mt-12 lg:pt-8">
-              <p className="text-sm font-semibold text-white">
-                Still have questions?
+              <p lang="id" className="text-sm font-semibold text-white">
+                Masih punya pertanyaan?
               </p>
 
-              <p className="mt-2 text-sm leading-6 text-[#A0A3B1]">
-                Reach out to us at{" "}
-                <a
-                  href="mailto:serixart@email.com"
-                  className="text-[#F1D2B1] transition-colors duration-300 hover:text-white"
-                >
-                  serixart@email.com
-                </a>
-              </p>
+              <div className="mt-5 space-y-6">
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/60">
+                    Hubungi Kami
+                  </p>
+                  <p className="mt-1.5 text-base font-semibold text-white/85">
+                    {footer.contact.name}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/60">
+                    WhatsApp
+                  </p>
+                  <a
+                    href={footer.contact.whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1.5 block text-base font-medium text-white/85 transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5]"
+                  >
+                    {footer.contact.whatsapp}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

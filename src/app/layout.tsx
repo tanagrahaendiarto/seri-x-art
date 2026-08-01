@@ -6,7 +6,7 @@ import PresenceBoundary from "@/components/PresenceBoundary";
 import { siteName, siteUrl } from "@/lib/site";
 import "./globals.css";
 
-const title = "Seri X Art 2026 — Create. Inspire. Compete.";
+const title = "Seri X Art Exhibition 2026";
 const description =
   "An art competition platform where creativity meets innovation. Showcase your talent, compete with the best, and inspire the world.";
 
@@ -24,10 +24,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: title,
-    template: `%s | ${siteName}`,
-  },
+  title,
   description,
   alternates: {
     canonical: "/",

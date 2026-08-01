@@ -23,7 +23,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = `${item.title} — Open Recruitment`;
+  const title = "Seri X Art Exhibition 2026";
   const description = item.description.join(" ");
   const url = `/recruitment/${item.slug}`;
 

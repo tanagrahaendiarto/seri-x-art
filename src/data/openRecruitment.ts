@@ -9,8 +9,6 @@ export type OpenRecruitmentItem = {
   locked?: boolean;
 };
 
-// Placeholder images (gallery-1/2/3) until official assets are provided —
-// swap the `image` path per item then, no component changes needed.
 export const openRecruitment: OpenRecruitmentItem[] = [
   {
     slug: "brand-ambassador",
@@ -21,7 +19,7 @@ export const openRecruitment: OpenRecruitmentItem[] = [
       "Program ini menjadi wadah untuk mengembangkan kemampuan komunikasi, memperluas relasi, meningkatkan kreativitas, dan membangun personal branding.",
       "Yuk, jadilah bagian dari perjalanan Seri X Art Exhibition 2026 dan tunjukkan pesonamu sebagai wajah yang menginspirasi di balik kemeriahan Wonderland Nusantara!",
     ],
-    image: "/images/gallery/gallery-1.jpg",
+    image: "/images/gallery/ba.png",
     cta: "Registrasi",
     href: "https://docs.google.com/forms/d/e/1FAIpQLSe8VAwmnNao_ZsAZxeWB55sxqgMt821NIJTyBVaf9ndCqhAww/viewform",
   },
@@ -35,7 +33,7 @@ export const openRecruitment: OpenRecruitmentItem[] = [
       "Program ini menjadi wadah untuk mengembangkan kemampuan kepemimpinan, komunikasi, kerja sama tim, serta memperluas relasi dan pengalaman kepanitiaan.",
       "Yuk, bergabung menjadi SERA dan jadilah bagian dari tim yang mewujudkan keajaiban Wonderland Nusantara di Seri X Art Exhibition 2026!",
     ],
-    image: "/images/gallery/gallery-2.jpg",
+    image: "/images/gallery/sera.png",
     cta: "Registrasi",
     href: "https://forms.gle/LaRznsbxQFyYZpdd7",
   },
@@ -47,7 +45,7 @@ export const openRecruitment: OpenRecruitmentItem[] = [
       "Pendaftaran seluruh cabang lomba Seri X Art Exhibition 2026 akan segera dibuka.",
       "Informasi mengenai kategori lomba, guidebook, persyaratan, serta jadwal pendaftaran akan diumumkan melalui website dan media sosial resmi Seri X Art Exhibition 2026.",
     ],
-    image: "/images/gallery/gallery-3.jpg",
+    image: "/images/gallery/lock.png",
     cta: "Segera Dibuka",
     locked: true,
   },
