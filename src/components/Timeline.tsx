@@ -8,42 +8,38 @@ export default function Timeline() {
       title: "Open Registration",
       date: "20–29 Agustus 2026",
       description:
-        "Periode pendaftaran resmi seluruh rangkaian Seri X Art Exhibition 2026. Peserta dapat memilih kategori lomba yang diinginkan dan melengkapi proses registrasi.",
+        "Pendaftaran seluruh cabang lomba dan rangkaian Seri X Art 2026.",
       isActive: true,
     },
     {
       title: "Pra-Event",
       date: "26–28 Agustus 2026",
-      description:
-        "Rangkaian kegiatan pra-acara sebagai pembuka menuju Seri X Art Exhibition 2026 serta membangun antusiasme peserta dan pengunjung.",
+      description: "Rangkaian pembuka menuju Seri X Art Exhibition 2026.",
       isActive: false,
     },
     {
       title: "Opening Ceremony",
       date: "30 Agustus 2026",
-      description:
-        "Pembukaan resmi Seri X Art Exhibition 2026 sekaligus dimulainya seluruh rangkaian kegiatan Wonderland Nusantara.",
+      description: "Pembukaan resmi seluruh rangkaian Seri X Art Exhibition.",
       isActive: false,
     },
     {
       title: "Technical Meeting",
       date: "31 Agustus 2026",
-      description:
-        "Penyampaian informasi teknis, peraturan, dan mekanisme pelaksanaan kepada seluruh peserta sesuai cabang lomba masing-masing.",
+      description: "Penyampaian informasi teknis kepada seluruh peserta.",
       isActive: false,
     },
     {
       title: "Main Event",
       date: "01–13 September 2026",
-      description:
-        "Pelaksanaan seluruh kompetisi, pameran, pertunjukan, serta berbagai aktivitas utama Seri X Art Exhibition 2026.",
+      description: "Kompetisi, pameran, dan berbagai aktivitas utama.",
       isActive: false,
     },
     {
       title: "Closing Ceremony",
       date: "20 September 2026",
       description:
-        "Penutupan resmi Seri X Art Exhibition 2026, pengumuman apresiasi, serta perayaan seluruh rangkaian kegiatan.",
+        "Penutupan dan pengumuman apresiasi seluruh rangkaian kegiatan.",
       isActive: false,
     },
   ];
@@ -75,7 +71,7 @@ export default function Timeline() {
           {/* Journey line */}
           <div className="absolute bottom-2 left-2 top-2 w-px bg-white/10" />
 
-          <div className="flex flex-col gap-8 sm:gap-10 lg:gap-12">
+          <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10">
             {timelineSteps.map((timelineStep) => (
               <TimelineItem
                 key={timelineStep.title}

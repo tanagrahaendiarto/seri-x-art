@@ -11,11 +11,11 @@ export default function FooterSection({
 }: FooterSectionProps) {
   return (
     <div>
-      <h3 className="mb-5 text-lg font-bold tracking-wide text-white">
+      <h4 className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-white">
         {title}
-      </h3>
+      </h4>
 
-      <div className="space-y-3 text-[#A0A3B1]">
+      <div className="space-y-3.5 text-[#A0A3B1]">
         {children}
       </div>
     </div>
