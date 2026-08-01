@@ -1,6 +1,6 @@
 # PROJECT_STATE
 
-Last Updated: 2026-07-26 (Competition Detail Modal Navigation)
+Last Updated: 2026-08-01 (Per-Category Guidebook Links)
 
 ---
 
@@ -55,6 +55,16 @@ Tech Stack:
 ✅ Sprint 7 — Motion Design System
 
 ✅ Competition Detail Pages & Modal Navigation
+
+✅ Per-Category Guidebook Links
+
+- Guidebook URL untuk Brand Ambassador, SERA (Volunteer), dan Perlombaan
+  kini dimapping per kategori di `src/lib/site.ts` (`guidebookUrls`),
+  menggantikan satu link global yang dipakai semua kategori.
+- Semua tombol Guidebook membuka link di tab baru
+  (`target="_blank" rel="noopener noreferrer"`).
+- Detail: `src/data/openRecruitment.ts` (slug bertipe `GuidebookKey`,
+  field `guidebookUrl` dihapus) & `RecruitmentDetailContent.tsx`.
 
 ---
 
@@ -250,7 +260,6 @@ Sedang proses:
 Bukan bug, hanya placeholder yang memang menunggu data final.
 
 - Register CTA belum diarahkan ke Linktree.
-- Guidebook CTA belum ditambahkan.
 - Footer social media masih placeholder.
 - siteUrl masih placeholder.
 - Domain production belum tersedia.
@@ -267,12 +276,6 @@ Register
 ↓
 
 Linktree
-
-Guidebook
-
-↓
-
-Google Drive
 
 Footer
 

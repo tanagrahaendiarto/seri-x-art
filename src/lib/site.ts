@@ -7,10 +7,19 @@ export const siteName = "Seri X Art";
 // Keeping it here ensures every competition uses the same registration entry point.
 export const registrationUrl = "https://forms.gle/";
 
-// Official guidebook for Seri X Art Exhibition 2026 — keeping it here ensures
-// every Open Recruitment detail page uses the same guidebook link.
-export const guidebookUrl =
-  "https://drive.google.com/file/d/1A66R2koa5XDTGpO4mPMGu-ZYY6_8T7fX/view";
+// Official guidebooks for Seri X Art Exhibition 2026, keyed by Open
+// Recruitment category — keeping them here ensures every detail page uses the
+// right link and each category can be updated independently.
+export const guidebookUrls = {
+  "brand-ambassador":
+    "https://drive.google.com/file/d/1tbsT_trsFhVvcuabIxK77w94A4Of7NWl/view?usp=drivesdk",
+  "sera-volunteer":
+    "https://drive.google.com/file/d/1awWLNckRNPGAN3d1DmxdRcU3M8km3CF-/view?usp=drivesdk",
+  "oprec-perlombaan":
+    "https://drive.google.com/file/d/1A66R2koa5XDTGpO4mPMGu-ZYY6_8T7fX/view",
+} as const;
+
+export type GuidebookKey = keyof typeof guidebookUrls;
 
 // Official Linktree for Seri X Art Exhibition 2026 — destination for the
 // primary Navbar CTA.
