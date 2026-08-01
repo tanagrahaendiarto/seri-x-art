@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { OpenRecruitmentItem } from "@/data/openRecruitment";
+import { guidebookUrl } from "@/lib/site";
 
 type RecruitmentDetailContentProps = {
   item: OpenRecruitmentItem;
@@ -47,24 +48,35 @@ export default function RecruitmentDetailContent({
           </div>
         </div>
 
-        {locked ? (
-          <button
-            type="button"
-            disabled
-            className="mt-10 inline-flex cursor-not-allowed rounded-full bg-[#DF9621] px-7 py-3.5 text-sm font-semibold text-[#171D2D] opacity-50 lg:px-8 lg:py-4"
-          >
-            {cta}
-          </button>
-        ) : (
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          {locked ? (
+            <button
+              type="button"
+              disabled
+              className="inline-flex w-full cursor-not-allowed items-center justify-center rounded-full bg-[#DF9621] px-7 py-3.5 text-sm font-semibold text-[#171D2D] opacity-50 sm:w-auto lg:px-8 lg:py-4"
+            >
+              {cta}
+            </button>
+          ) : (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center rounded-full bg-[#DF9621] px-7 py-3.5 text-sm font-semibold text-[#171D2D] transition-transform duration-300 hover:scale-105 hover:bg-[#DF9621]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A] sm:w-auto lg:px-8 lg:py-4"
+            >
+              {cta}
+            </a>
+          )}
+
           <a
-            href={href}
+            href={guidebookUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex rounded-full bg-[#DF9621] px-7 py-3.5 text-sm font-semibold text-[#171D2D] transition-transform duration-300 hover:scale-105 hover:bg-[#DF9621]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A] lg:px-8 lg:py-4"
+            className="inline-flex w-full items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-white/40 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A] sm:w-auto lg:px-8 lg:py-4"
           >
-            {cta}
+            Guidebook
           </a>
-        )}
+        </div>
       </div>
     </div>
   );

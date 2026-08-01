@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { buttonHover, hoverTransition } from "@/lib/motion";
+import { linktreeUrl } from "@/lib/site";
 
 const navItems = [
   {
@@ -66,14 +67,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Register Button (desktop) */}
-        <motion.button
-          type="button"
+        {/* Daftar Button (desktop) */}
+        <motion.a
+          href={linktreeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           {...buttonHover}
-          className="hidden rounded-full bg-[#DF9621] px-6 py-3 text-sm font-semibold text-[#171D2D] transition-colors duration-300 hover:bg-[#DF9621]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171D2D] md:block"
+          className="hidden rounded-full bg-[#DF9621] px-6 py-3 text-sm font-semibold text-[#171D2D] transition-colors duration-300 hover:bg-[#DF9621]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171D2D] md:inline-flex md:items-center md:justify-center"
         >
-          Register
-        </motion.button>
+          Daftar
+        </motion.a>
 
         {/* Mobile menu toggle */}
         <button
@@ -142,13 +145,15 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <motion.button
-            type="button"
+          <motion.a
+            href={linktreeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             {...buttonHover}
-            className="mt-6 w-full rounded-full bg-[#DF9621] px-6 py-3 text-sm font-semibold text-[#171D2D] transition-colors duration-300 hover:bg-[#DF9621]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5]"
+            className="mt-6 flex w-full items-center justify-center rounded-full bg-[#DF9621] px-6 py-3 text-sm font-semibold text-[#171D2D] transition-colors duration-300 hover:bg-[#DF9621]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5]"
           >
-            Register
-          </motion.button>
+            Daftar
+          </motion.a>
         </div>
       </motion.div>
     </header>

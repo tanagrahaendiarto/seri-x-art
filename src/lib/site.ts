@@ -7,6 +7,16 @@ export const siteName = "Seri X Art";
 // Keeping it here ensures every competition uses the same registration entry point.
 export const registrationUrl = "https://forms.gle/";
 
+// Official guidebook for Seri X Art Exhibition 2026 — keeping it here ensures
+// every Open Recruitment detail page uses the same guidebook link.
+export const guidebookUrl =
+  "https://drive.google.com/file/d/1A66R2koa5XDTGpO4mPMGu-ZYY6_8T7fX/view";
+
+// Official Linktree for Seri X Art Exhibition 2026 — destination for the
+// primary Navbar CTA.
+export const linktreeUrl =
+  "https://linktr.ee/serixart2026?utm_source=linktree_profile_share&ltsid=2ad40c99-6c1a-4b88-9d08-ee43f9d5c79b";
+
 export const footer = {
   cta: {
     title: "Masih memiliki pertanyaan?",
