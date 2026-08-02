@@ -18,7 +18,7 @@ const focusableSelector =
 export default function CompetitionModal({
   children,
   titleId = "competition-title",
-  backLabel = "Kembali ke Gallery",
+  backLabel = "Kembali ke Competition",
 }: CompetitionModalProps) {
   const router = useRouter();
   const dialogRef = useRef<HTMLElement>(null);

@@ -90,7 +90,7 @@ export default async function CompetitionDetailPage({
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="m15 18-6-6 6-6" />
           </svg>
-          Kembali ke Gallery
+          Kembali ke Competition
         </Link>
 
         <div className="mt-12 lg:mt-16">

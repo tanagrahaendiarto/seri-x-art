@@ -45,7 +45,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
                 d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
               />
             </svg>
-            Coming Soon
+            Segera Hadir
           </span>
         )}
       </div>
@@ -83,7 +83,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           <button
             type="button"
             onClick={() => setIsComingSoonOpen(true)}
-            aria-label={`${title} — Coming Soon`}
+            aria-label={`${title} — Segera Hadir`}
             className="block h-full w-full rounded-xl text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A]"
           >
             {cardContent}

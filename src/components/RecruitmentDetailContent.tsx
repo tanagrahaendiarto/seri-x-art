@@ -19,7 +19,7 @@ export default function RecruitmentDetailContent({
         <div className="relative aspect-4/5">
           <Image
             src={image}
-            alt={`${title} poster`}
+            alt={`Poster ${title}`}
             fill
             priority={priority}
             sizes="(max-width:1024px) 100vw, (max-width:1280px) 40vw, 28rem"

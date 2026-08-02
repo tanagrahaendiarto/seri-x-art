@@ -8,7 +8,7 @@ import "./globals.css";
 
 const title = "Seri X Art Exhibition 2026";
 const description =
-  "An art competition platform where creativity meets innovation. Showcase your talent, compete with the best, and inspire the world.";
+  "Platform kompetisi seni yang mempertemukan kreativitas dan inovasi. Tunjukkan bakatmu, berkompetisi dengan yang terbaik, dan menginspirasi dunia.";
 
 const fraunces = Fraunces({
   variable: "--font-display",

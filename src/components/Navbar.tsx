@@ -75,7 +75,7 @@ export default function Navbar() {
           {...buttonHover}
           className="hidden rounded-full bg-[#DF9621] px-6 py-3 text-sm font-semibold text-[#171D2D] transition-colors duration-300 hover:bg-[#DF9621]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171D2D] md:inline-flex md:items-center md:justify-center"
         >
-          Daftar
+          Register
         </motion.a>
 
         {/* Mobile menu toggle */}

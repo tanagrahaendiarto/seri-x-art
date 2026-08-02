@@ -17,7 +17,7 @@ const eventJsonLd = {
   "@type": "Event",
   name: "Seri X Art 2026",
   description:
-    "An art competition platform where creativity meets innovation. Showcase your talent, compete with the best, and inspire the world.",
+    "Platform kompetisi seni yang mempertemukan kreativitas dan inovasi. Tunjukkan bakatmu, berkompetisi dengan yang terbaik, dan menginspirasi dunia.",
   startDate: "2026-07-01",
   endDate: "2026-08-01",
   eventStatus: "https://schema.org/EventScheduled",

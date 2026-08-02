@@ -12,7 +12,7 @@ export const competitions: Competition[] = [
     title: "Digital Painting",
     category: "Illustration",
     description:
-      "Bring imaginative worlds and expressive characters to life through your distinct digital painting practice. Explore colour, composition, and storytelling in a work that feels entirely your own.",
+      "Hadirkan dunia imajinatif dan karakter ekspresif melalui gaya digital painting khasmu. Eksplorasi warna, komposisi, dan storytelling dalam karya yang sepenuhnya mencerminkan dirimu.",
     image: "/images/gallery/gallery-1.jpg",
   },
   {
@@ -20,7 +20,7 @@ export const competitions: Competition[] = [
     title: "Future Vision",
     category: "Concept Art",
     description:
-      "Imagine what comes next. Create a compelling visual concept that turns a bold idea for the future into a world viewers can step into and remember.",
+      "Bayangkan apa yang akan terjadi selanjutnya. Ciptakan konsep visual yang kuat, mengubah ide berani tentang masa depan menjadi dunia yang bisa dimasuki dan diingat oleh siapa pun yang melihatnya.",
     image: "/images/gallery/gallery-2.jpg",
   },
   {
@@ -28,7 +28,7 @@ export const competitions: Competition[] = [
     title: "Cyber Dreams",
     category: "Digital Art",
     description:
-      "Explore the space between technology and imagination through a digital artwork with a clear point of view, striking atmosphere, and contemporary visual language.",
+      "Jelajahi ruang antara teknologi dan imajinasi melalui karya seni digital dengan sudut pandang yang jelas, suasana yang kuat, dan bahasa visual kontemporer.",
     image: "/images/gallery/gallery-3.jpg",
   },
   {
@@ -36,7 +36,7 @@ export const competitions: Competition[] = [
     title: "Creative Motion",
     category: "Animation",
     description:
-      "Use movement, rhythm, and visual storytelling to create an animated piece that captures attention and gives your creative idea room to unfold.",
+      "Gunakan gerakan, ritme, dan storytelling visual untuk menciptakan karya animasi yang menarik perhatian dan memberi ruang bagi ide kreatifmu untuk berkembang.",
     image: "/images/gallery/gallery-4.jpg",
   },
   {
@@ -44,7 +44,7 @@ export const competitions: Competition[] = [
     title: "Modern Sculpture",
     category: "3D Art",
     description:
-      "Shape a contemporary three-dimensional work that balances form, material, and concept. Show how your perspective can transform space into an artistic statement.",
+      "Bentuk karya tiga dimensi kontemporer yang menyeimbangkan bentuk, material, dan konsep. Tunjukkan bagaimana sudut pandangmu mampu mengubah ruang menjadi pernyataan artistik.",
     image: "/images/gallery/gallery-5.jpg",
   },
   {
@@ -52,7 +52,7 @@ export const competitions: Competition[] = [
     title: "Visual Story",
     category: "Photography",
     description:
-      "Tell a resonant story through a single photograph. Frame an honest perspective, a meaningful moment, or an unexpected detail with intention and clarity.",
+      "Ceritakan kisah yang membekas melalui satu bidikan foto. Bingkai sudut pandang yang jujur, momen bermakna, atau detail tak terduga dengan niat dan kejelasan yang kuat.",
     image: "/images/gallery/gallery-6.jpg",
   },
 ];

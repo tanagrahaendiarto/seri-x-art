@@ -61,7 +61,7 @@ export default function ComingSoonDialog({ onClose }: ComingSoonDialogProps) {
         variants={modalPanel}
       >
         <h2 id="coming-soon-title" className="text-xl font-semibold text-white">
-          Coming Soon
+          Segera Hadir
         </h2>
 
         <div

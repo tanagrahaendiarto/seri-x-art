@@ -62,8 +62,8 @@ export default function Timeline() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-[#A0A3B1]">
-            Follow every stage of the Seri X Art competition from
-            registration until the winner announcement.
+            Ikuti setiap tahapan kompetisi Seri X Art, mulai dari registrasi
+            hingga pengumuman pemenang.
           </p>
         </div>
 

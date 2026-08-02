@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Seri X Art 2026 — Create. Inspire. Compete.";
+export const alt = "Seri X Art 2026 — Berkarya. Menginspirasi. Berkompetisi.";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -38,7 +38,7 @@ export default function OpengraphImage() {
             lineHeight: 1.15,
           }}
         >
-          Create. Inspire. Compete.
+          Berkarya. Menginspirasi. Berkompetisi.
         </div>
         <div
           style={{
@@ -48,7 +48,7 @@ export default function OpengraphImage() {
             color: "#DF9621",
           }}
         >
-          National Art Competition
+          Kompetisi Seni Nasional
         </div>
       </div>
     ),

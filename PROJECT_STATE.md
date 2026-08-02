@@ -1,6 +1,6 @@
 # PROJECT_STATE
 
-Last Updated: 2026-08-01 (Per-Category Guidebook Links)
+Last Updated: 2026-08-01 (Maintenance Mode)
 
 ---
 
@@ -65,6 +65,20 @@ Tech Stack:
   (`target="_blank" rel="noopener noreferrer"`).
 - Detail: `src/data/openRecruitment.ts` (slug bertipe `GuidebookKey`,
   field `guidebookUrl` dihapus) & `RecruitmentDetailContent.tsx`.
+
+✅ Deployment & Final Content
+
+- Push ke GitHub selesai.
+- Deploy ke Vercel selesai, domain production sudah terhubung.
+- Register CTA, Linktree, Guidebook, dan Social Media (Instagram, TikTok,
+  YouTube) sudah terisi dan dipusatkan di `src/lib/site.ts`.
+- Konten final (Gallery, Timeline, FAQ, Competition, Contact) sudah
+  menggunakan data sebenarnya, menggantikan placeholder.
+
+**Project resmi memasuki Maintenance Mode.** Tidak ada lagi pengembangan
+fitur/arsitektur besar yang direncanakan; fokus selanjutnya adalah menjaga
+stabilitas, memperbarui konten saat dibutuhkan, dan perbaikan kecil bila
+ditemukan bug.
 
 ---
 
@@ -247,9 +261,6 @@ Sudah dilakukan:
 - Initial Commit
 - Repository GitHub dibuat
 - Branch main
-
-Sedang proses:
-
 - Push ke GitHub
 - Deploy ke Vercel
 
@@ -257,19 +268,17 @@ Sedang proses:
 
 # Known Issues
 
-Bukan bug, hanya placeholder yang memang menunggu data final.
+Tidak ada known issue aktif. Seluruh placeholder sebelumnya (Register CTA,
+footer social media, siteUrl, domain production) sudah digantikan dengan
+data final.
 
-- Register CTA belum diarahkan ke Linktree.
-- Footer social media masih placeholder.
-- siteUrl masih placeholder.
-- Domain production belum tersedia.
 - SectionHeader.tsx & FeatureCard.tsx masih dead component (belum diputuskan dihapus atau dipertahankan).
 
 ---
 
-# Planned Integrations
+# Integrations
 
-Setelah deployment:
+Sudah terintegrasi:
 
 Register
 
@@ -291,7 +300,7 @@ TikTok
 
 YouTube
 
-Semua URL nantinya dipusatkan melalui:
+Semua URL dipusatkan melalui:
 
 src/lib/site.ts
 
@@ -301,59 +310,17 @@ agar mudah diubah tanpa menyentuh komponen.
 
 # Next Priorities
 
-## 1.
+Project sudah production-ready dan dalam Maintenance Mode. Tidak ada
+prioritas pengembangan besar saat ini.
 
-Selesaikan push GitHub.
+Fokus ke depan:
 
----
-
-## 2.
-
-Deploy ke Vercel.
-
----
-
-## 3.
-
-Hubungkan domain production.
-
----
-
-## 4.
-
-Tambahkan:
-
-- Linktree
-- Guidebook
-- Social Media
-
----
-
-## 5.
-
-Final Content
-
-Ganti:
-
-- Gallery
-- Timeline
-- FAQ
-- Competition
-- Contact
-
-menggunakan data sebenarnya.
-
----
-
-## 6.
-
-Portfolio Polish
-
-Tambahkan:
-
-- Screenshot README
-- Live Demo
-- GIF Preview
+- Update konten (Gallery, Timeline, FAQ, Competition, Contact) sesuai
+  kebutuhan event berikutnya.
+- Perbaikan kecil / bug fix bila ditemukan.
+- Keputusan akhir soal dead component (SectionHeader.tsx, FeatureCard.tsx):
+  hapus atau pertahankan.
+- Portfolio polish (opsional): Screenshot README, Live Demo, GIF Preview.
 
 ---
 

@@ -6,21 +6,21 @@ export default function Competition() {
     {
       title: "Digital Art",
       description:
-        "Create stunning digital illustrations using your favorite creative tools.",
+        "Ciptakan ilustrasi digital yang memukau menggunakan berbagai alat kreatif favoritmu.",
     },
     {
       title: "Photography",
       description:
-        "Capture meaningful moments through your unique perspective.",
+        "Abadikan momen bermakna melalui sudut pandangmu yang unik.",
     },
     {
       title: "Illustration",
       description:
-        "Transform ideas into expressive illustrations with your own artistic style.",
+        "Ubah ide menjadi ilustrasi ekspresif dengan gaya seni khasmu sendiri.",
     },
     {
       title: "Painting",
-      description: "Showcase traditional and contemporary painting techniques.",
+      description: "Tampilkan teknik melukis tradisional maupun kontemporer.",
     },
   ];
 
@@ -42,8 +42,8 @@ export default function Competition() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-[#A0A3B1]">
-            Discover various competition categories designed to challenge your
-            creativity and showcase your artistic talent.
+            Temukan berbagai kategori lomba yang dirancang untuk menantang
+            kreativitasmu dan menunjukkan bakat seni terbaikmu.
           </p>
         </div>
 
