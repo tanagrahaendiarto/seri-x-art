@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative isolate scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_80%,#20283A)] py-14 text-white sm:py-20 lg:py-24"
+      className="relative isolate scroll-mt-20 bg-[linear-gradient(to_bottom,#171D2D_0%,#171D2D_35%,#20283A_60%,#171D2D_100%)] py-14 text-white sm:py-20 lg:py-24"
     >
       <SectionOrnament section="about" />
 
