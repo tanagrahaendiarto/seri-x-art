@@ -5,13 +5,14 @@ import { useEffect, useRef } from "react";
 import { modalBackdrop, modalPanel } from "@/lib/motion";
 
 type ComingSoonDialogProps = {
+  title: string;
   onClose: () => void;
 };
 
-// Small confirmation-style dialog for locked Open Recruitment cards — reuses
-// the same backdrop/panel motion variants and focus/Escape handling as
-// CompetitionModal, but manages its own open state instead of a route.
-export default function ComingSoonDialog({ onClose }: ComingSoonDialogProps) {
+// Small confirmation-style dialog for locked/closed Open Recruitment cards —
+// reuses the same backdrop/panel motion variants and focus/Escape handling
+// as CompetitionModal, but manages its own open state instead of a route.
+export default function ComingSoonDialog({ title, onClose }: ComingSoonDialogProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
 
@@ -61,17 +62,17 @@ export default function ComingSoonDialog({ onClose }: ComingSoonDialogProps) {
         variants={modalPanel}
       >
         <h2 id="coming-soon-title" className="text-xl font-semibold text-white">
-          Segera Hadir
+          Pendaftaran Ditutup
         </h2>
 
         <div
           id="coming-soon-description"
           className="mt-3 space-y-3 text-sm leading-6 text-[#A0A3B1]"
         >
-          <p>Pendaftaran cabang perlombaan belum dibuka.</p>
+          <p>Pendaftaran {title} untuk Seri X Art Exhibition 2026 telah ditutup.</p>
           <p>
-            Silakan nantikan pengumuman resmi melalui website dan media
-            sosial Seri X Art Exhibition 2026.
+            Terima kasih atas antusiasmemu. Nantikan info terbaru melalui
+            website dan media sosial resmi Seri X Art Exhibition 2026.
           </p>
         </div>
 

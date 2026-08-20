@@ -22,8 +22,9 @@ export const openRecruitment: OpenRecruitmentItem[] = [
       "Yuk, jadilah bagian dari perjalanan Seri X Art Exhibition 2026 dan tunjukkan pesonamu sebagai wajah yang menginspirasi di balik kemeriahan Wonderland Nusantara!",
     ],
     image: "/images/gallery/ba.png",
-    cta: "Registrasi",
+    cta: "Pendaftaran Ditutup",
     href: "https://docs.google.com/forms/d/e/1FAIpQLSe8VAwmnNao_ZsAZxeWB55sxqgMt821NIJTyBVaf9ndCqhAww/viewform",
+    locked: true,
   },
   {
     slug: "sera-volunteer",
@@ -36,20 +37,21 @@ export const openRecruitment: OpenRecruitmentItem[] = [
       "Yuk, bergabung menjadi SERA dan jadilah bagian dari tim yang mewujudkan keajaiban Wonderland Nusantara di Seri X Art Exhibition 2026!",
     ],
     image: "/images/gallery/sera.png",
-    cta: "Registrasi",
+    cta: "Pendaftaran Ditutup",
     href: "https://forms.gle/LaRznsbxQFyYZpdd7",
+    locked: true,
   },
   {
     slug: "oprec-perlombaan",
     category: "OPEN RECRUITMENT",
     title: "Perlombaan",
     description: [
-      "Pendaftaran seluruh cabang lomba Seri X Art Exhibition 2026 akan segera dibuka.",
-      "Informasi mengenai kategori lomba, guidebook, persyaratan, serta jadwal pendaftaran akan diumumkan melalui website dan media sosial resmi Seri X Art Exhibition 2026.",
+      "Pendaftaran seluruh cabang lomba Seri X Art Exhibition 2026 resmi dibuka.",
+      "Informasi mengenai kategori lomba, guidebook, serta persyaratan dapat dilihat melalui tombol Registrasi dan Guidebook di bawah ini.",
     ],
-    image: "/images/gallery/lock.png",
-    cta: "Segera Dibuka",
-    locked: true,
+    image: "/images/gallery/perlombaan.PNG",
+    cta: "Registrasi",
+    href: "https://ipb.link/pendaftaran-lomba-sxa-exhibition2026",
   },
 ];
 
