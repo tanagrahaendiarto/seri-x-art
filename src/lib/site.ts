@@ -16,7 +16,7 @@ export const guidebookUrls = {
   "sera-volunteer":
     "https://drive.google.com/file/d/1awWLNckRNPGAN3d1DmxdRcU3M8km3CF-/view?usp=drivesdk",
   "oprec-perlombaan":
-    "https://drive.google.com/file/d/1A66R2koa5XDTGpO4mPMGu-ZYY6_8T7fX/view",
+    "https://drive.google.com/file/d/1wQVHwEhz5e05mYjacUK53U5b05qfHmdX/view?usp=sharing",
 } as const;
 
 export type GuidebookKey = keyof typeof guidebookUrls;
