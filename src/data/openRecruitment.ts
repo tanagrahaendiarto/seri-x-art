@@ -46,12 +46,13 @@ export const openRecruitment: OpenRecruitmentItem[] = [
     category: "OPEN RECRUITMENT",
     title: "Perlombaan",
     description: [
-      "Pendaftaran seluruh cabang lomba Seri X Art Exhibition 2026 resmi dibuka.",
-      "Informasi mengenai kategori lomba, guidebook, serta persyaratan dapat dilihat melalui tombol Registrasi dan Guidebook di bawah ini.",
+      "Pendaftaran seluruh cabang lomba Seri X Art Exhibition 2026 telah ditutup.",
+      "Informasi mengenai kategori lomba, guidebook, serta persyaratan dapat dilihat melalui Guidebook di bawah ini.",
     ],
     image: "/images/gallery/perlombaan.PNG",
-    cta: "Registrasi",
+    cta: "Pendaftaran Ditutup",
     href: "https://ipb.link/pendaftaran-lomba-sxa-exhibition2026",
+    locked: true,
   },
 ];
 

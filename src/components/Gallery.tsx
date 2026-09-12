@@ -27,8 +27,8 @@ export default function Gallery() {
 
           <p className="mt-6 text-lg leading-8 text-[#A0A3B1]">
             Jadilah bagian dari Seri X Art Exhibition 2026 sebagai Brand
-            Ambassador, SERA (Volunteer), atau nantikan pembukaan pendaftaran
-            lomba.
+            Ambassador, SERA (Volunteer), atau pantau terus informasi perlombaan
+            dan rangkaian acara lainnya.
           </p>
         </div>
 
