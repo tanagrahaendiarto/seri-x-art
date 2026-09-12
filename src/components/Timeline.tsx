@@ -9,7 +9,7 @@ export default function Timeline() {
       date: "20–29 Agustus 2026",
       description:
         "Pendaftaran seluruh cabang lomba dan rangkaian Seri X Art 2026.",
-      isActive: true,
+      isActive: false,
     },
     {
       title: "Pra-Event",
@@ -33,7 +33,7 @@ export default function Timeline() {
       title: "Main Event",
       date: "01–13 September 2026",
       description: "Kompetisi, pameran, dan berbagai aktivitas utama.",
-      isActive: false,
+      isActive: true,
     },
     {
       title: "Closing Ceremony",

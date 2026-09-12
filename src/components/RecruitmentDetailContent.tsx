@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { OpenRecruitmentItem } from "@/data/openRecruitment";
-import { guidebookUrls } from "@/lib/site";
+import { guidebookUrls, seraFaqUrl, seraQuestionFormUrl } from "@/lib/site";
 
 type RecruitmentDetailContentProps = {
   item: OpenRecruitmentItem;
@@ -77,6 +77,27 @@ export default function RecruitmentDetailContent({
             Guidebook
           </a>
         </div>
+
+        {item.slug === "sera-volunteer" && (
+          <div className="mt-4 flex flex-col gap-4 sm:flex-row">
+            <a
+              href={seraFaqUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-white/40 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A] sm:w-auto lg:px-8 lg:py-4"
+            >
+              Pertanyaan yang Sudah Dijawab
+            </a>
+            <a
+              href={seraQuestionFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-white/40 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A171D5] focus-visible:ring-offset-4 focus-visible:ring-offset-[#20283A] sm:w-auto lg:px-8 lg:py-4"
+            >
+              Mau Bertanya
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

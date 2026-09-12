@@ -21,6 +21,12 @@ export const guidebookUrls = {
 
 export type GuidebookKey = keyof typeof guidebookUrls;
 
+// SERA (Volunteer) support links shown alongside the registration status on
+// its detail page — FAQ document and the question-submission form.
+// TODO: Replace with the real SPS/FAQ link and Google Form link.
+export const seraFaqUrl = "#";
+export const seraQuestionFormUrl = "#";
+
 // Official Linktree for Seri X Art Exhibition 2026 — destination for the
 // primary Navbar CTA.
 export const linktreeUrl =
